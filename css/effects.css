@@ -1,0 +1,27 @@
+.show {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.show_up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.showFromRight {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.showFromLeft {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.showFromSide {
+    opacity: 1;
+    transform: translateX(0);
+}

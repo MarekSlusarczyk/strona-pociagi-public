@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --headers: 'Limelight', sans-serif;
+    --text: 'Noto Sans NKo Unjoined', sans-serif;
+    --arial: 'Arial', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(255, 252, 247);
+}
+
+header {
+    height: 50vh;
+    position: relative;
+    color: white;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-image: url('../multimedia/train-7839192_1920.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+h1 {
+    font-family: var(--headers);
+    text-align: center;
+    text-shadow: #000 1px 0 10px;
+    z-index: 1;
+}
+
+nav {
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    color: white;
+    font-family: var(--text);
+    font-weight: bold;
+}
+
+li {
+    margin: 20px;
+}
+
+li a {
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+}
+
+li a:hover {
+    background-color:rgba(255, 255, 255, 0.2);
+}
+
+main {
+    min-height: 100vh;
+}
+
+main .main_top {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main_top hr {
+    width: 100px;
+    height: 2px;
+    background-color:rgb(179, 179, 179);
+    border: none;
+}
+
+.main_topContent {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 30px 0 20px 0;
+    justify-content: space-evenly;
+}
+
+.main_topContent > article {
+    position: relative;
+    height: 400px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 32px 0px rgba(0,0,0,0.5);
+    margin: 30px;
+    transition: all 0.2s ease-in;
+}
+
+.main_topContent > article:hover {
+    transform: scale(1.05);
+}
+
+.main_topContent > article div.image {
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-size: cover;
+    border-bottom: 3px solid black;
+}
+
+.main_topContent > article:nth-child(1) div.image {
+    background-image: url('https://cdn.pixabay.com/photo/2012/10/25/23/18/train-62849_1280.jpg');
+    background-position: center;
+}
+
+.main_topContent > article:nth-child(2) div.image {
+    background-image: url('https://cdn.pixabay.com/photo/2016/07/09/19/13/train-1506645_1280.jpg');
+    background-position: center;
+}
+
+.main_topContent > article h3 {
+    font-family: var(--text);
+    margin: 15px 0 15px 15px;
+}
+
+.main_topContent > article p {
+    font-family: var(--text);
+    color: rgb(139, 139, 139);
+    margin: 15px 0 15px 15px;
+}
+
+.main_topContent > article a {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-family: var(--text);
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+}
+
+h2 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-family: var(--text);
+    font-size: 22px;
+    text-align: center;
+}
+
+
+main .main_bottom { 
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main .main_bottom article {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 32px 0px rgba(0,0,0,0.5);
+    margin: 60px 0 40px 0;
+    overflow-y: hidden;
+}
+
+main .main_bottom article:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+main .main_bottom article img {
+    border-radius: 20px;
+    /* height: 200px; */
+    width: 40%;
+}
+
+main .main_bottom article div.text {
+    margin: 30px;
+}
+
+main .main_bottom article div.text a {
+    font-family: var(--text);
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+main .main_bottom article div.text h3 {
+    font-family: var(--text);
+    font-size: 20px;
+}
+
+main .main_bottom article div.text p {
+    font-family: var(--text);
+    font-size: 16px;
+    color: rgb(139, 139, 139);
+    line-height: 1.5em;
+    margin-top: 30px;
+}
+
+footer {
+    min-height: 20vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+footer .footerInformations {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.footerInformations img {
+    max-width: 55px; 
+    border-radius: 50%;
+    margin: 15px 0 10px 0;
+}
+
+.footerInformations p {
+    font-family: var(--arial);
+    font-size: 15px;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.footerInformations .author {
+    font-family: var(--arial);
+    font-size: 15px;
+}
+
+.websiteTitle {
+    font-size: 19px;
+    font-family: var(--arial);
+    margin-bottom: 8px;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 80px 80px;
+    gap: 10px;
+    margin: 30px 0 30px 0;
+}
+
+.links .linkBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.links .linkBox:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.links .linkBox img {
+    max-width: 40px;
+}
+
+#pixabay {
+    border-radius: 50%;
+}
+
+.links .linkBox .details {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--arial);
+}
+
+.links .linkBox .details .linkTitle {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.links .linkBox .details .description {
+    font-size: 14px;
+    color: rgb(179, 179, 179);
+}
+
+#githubIcon {
+    font-size: 30px;
+}
+
+#goUp {
+    width: 40px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: rgb(179, 179, 179);
+    background-color: transparent;
+    border: 2px solid rgb(179, 179, 179);
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.informationsList {
+    text-align: center;
+    list-style-type: none;
+}
+
+.informationsList li {
+    font-family: var(--text);
+}
+
+.informationsList li a {
+    color: green;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 1150px) {
+    footer .footerInformations {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .footerInformations img {
+        max-width: 75px; 
+        border-radius: 50%;
+        margin: 15px 0 10px 0;
+    }
+
+    .links {
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 80px 80px 80px 80px;
+        gap: 10px;
+        margin: 30px 0 30px 0;
+    }  
+
+    main .main_bottom article {
+        display: flex;
+        /* justify-content: space-between; */
+        flex-direction: column;
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0px 0px 32px 0px rgba(0,0,0,0.5);
+        margin: 60px 0 40px 0;
+        overflow-y: hidden;
+    }
+
+    main .main_bottom article img {
+        width: 100%;
+        max-height: 40%;
+    }
+    
+    main .main_bottom article:nth-child(even) {
+        flex-direction: column;
+    }
+}
